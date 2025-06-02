@@ -88,7 +88,7 @@ mysql -u xxxx -pxxxxx mydb
 
 ### accès airflow
 localhost:8080 
-admin/admin
+airflow/airflow
 
 ### accès grafana
 localhost:3000
