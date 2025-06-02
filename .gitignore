@@ -1,0 +1,11 @@
+clientCredentials.json
+output_log.txt
+.env
+.env.test
+.env.local
+.env.test.local
+dump_ft.sql
+Airflow/logs
+.venv
+mlartifacts/
+mlruns/

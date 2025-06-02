@@ -1,0 +1,89 @@
+{
+    "id": "191KKCF",
+    "intitule": "Agent.e d'accueil (H/F)",
+    "description": "Accueillir et orienter un public sans abri (hommes, femmes isolé.es, couples).\nAccompagner autour des services de la vie quotidienne proposés : espace hygiène, buanderie, consignes...\nParticiper à l'animation et à la sérénité de l'établissement.",
+    "dateCreation": "2025-04-19T10:52:46.997Z",
+    "dateActualisation": "2025-04-19T15:45:05.838Z",
+    "lieuTravail": {
+        "libelle": "75 - PARIS 13",
+        "latitude": 48.830193,
+        "longitude": 2.365001,
+        "codePostal": "75013",
+        "commune": "75113"
+    },
+    "romeCode": "M1601",
+    "romeLibelle": "Chargé / Chargée d'accueil",
+    "appellationlibelle": "Agent / Agente d'accueil",
+    "entreprise": {
+        "nom": "L'ARCHE D'AVENIRS - OEUVRE MIE DE PAIN",
+        "entrepriseAdaptee": false
+    },
+    "typeContrat": "CDI",
+    "typeContratLibelle": "CDI",
+    "natureContrat": "Contrat travail",
+    "experienceExige": "D",
+    "experienceLibelle": "Débutant accepté",
+    "competences": [
+        {
+            "code": "300361",
+            "libelle": "Accueillir, orienter, renseigner un public",
+            "exigence": "S"
+        },
+        {
+            "code": "104090",
+            "libelle": "Assurer un accueil téléphonique",
+            "exigence": "S"
+        },
+        {
+            "code": "300363",
+            "libelle": "Identifier, traiter une demande client",
+            "exigence": "S"
+        }
+    ],
+    "salaire": {
+        "libelle": "Mensuel de 1801.8 Euros à 1890.0 Euros sur 12.0 mois",
+        "complement1": "Chèque repas",
+        "complement2": "Mutuelle"
+    },
+    "dureeTravailLibelle": "35H Travail le samedi",
+    "dureeTravailLibelleConverti": "Temps plein",
+    "alternance": false,
+    "contact": {
+        "nom": "L'ARCHE D'AVENIRS - OEUVRE MIE DE PAIN - M. François BUCHSBAUM",
+        "coordonnees1": "Pour postuler, utiliser le lien suivant : https://candidat.francetravail.fr/offres/recherche/detail/191KKCF",
+        "courriel": "Pour postuler, utiliser le lien suivant : https://candidat.francetravail.fr/offres/recherche/detail/191KKCF"
+    },
+    "agence": {},
+    "nombrePostes": 1,
+    "accessibleTH": false,
+    "deplacementCode": "2",
+    "deplacementLibelle": "Ponctuels Zone départementale",
+    "qualificationCode": "6",
+    "qualificationLibelle": "Employé qualifié",
+    "codeNAF": "87.90B",
+    "secteurActivite": "87",
+    "secteurActiviteLibelle": "Hébergement social pour adultes et familles en difficultés et autre hébergement social",
+    "qualitesProfessionnelles": [
+        {
+            "libelle": "Gérer son stress",
+            "description": "Capacité à garder le contrôle de soi pour agir efficacement face à des situations irritantes, imprévues, stressantes."
+        },
+        {
+            "libelle": "Travailler en équipe",
+            "description": "Capacité à travailler et à se coordonner avec les autres au sein de l'entreprise pour réaliser les objectifs fixés."
+        },
+        {
+            "libelle": "Être à l'écoute, faire preuve d'empathie",
+            "description": "Capacité à écouter activement, réceptionner des informations et messages, faire preuve d'ouverture d'esprit et de diplomatie."
+        }
+    ],
+    "origineOffre": {
+        "origine": "1",
+        "urlOrigine": "https://candidat.francetravail.fr/offres/recherche/detail/191KKCF"
+    },
+    "contexteTravail": {
+        "horaires": [
+            "35H Travail le samedi"
+        ]
+    }
+}

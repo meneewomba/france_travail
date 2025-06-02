@@ -1,0 +1,11 @@
+global:
+  scrape_interval: 5s  # Fréquence de scrapping
+
+scrape_configs:
+  - job_name: 'fastapi'
+    static_configs:
+      - targets: ['fastapi:8000']
+
+  - job_name: 'mysql'
+    static_configs:
+      - targets: ['mysqld-exporter:9104']

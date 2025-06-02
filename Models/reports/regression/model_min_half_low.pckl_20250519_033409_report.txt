@@ -1,0 +1,4 @@
+Rapport de régression
+MAE: 1694.6088
+MSE: 3372323.1477
+R2: -5.7231

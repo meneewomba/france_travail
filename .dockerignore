@@ -1,0 +1,12 @@
+output_log.txt
+*.pckl
+.venv
+__pycache__/    
+.git/
+.venv/
+docker-compose.yml
+France_Travail.postman_collection.json
+setup.py
+start.sh
+*.pbix
+Airflow/logs

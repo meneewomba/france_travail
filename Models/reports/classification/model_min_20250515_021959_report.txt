@@ -1,0 +1,20 @@
+Rapport de classification - Données de référence
+              precision    recall  f1-score   support
+
+        high       0.74      0.88      0.80      9904
+         low       0.95      0.87      0.91     23607
+
+    accuracy                           0.87     33511
+   macro avg       0.84      0.88      0.86     33511
+weighted avg       0.89      0.87      0.88     33511
+
+
+Rapport de classification - Données actuelles
+              precision    recall  f1-score   support
+
+        high       0.70      0.83      0.76      2440
+         low       0.92      0.86      0.89      5938
+
+    accuracy                           0.85      8378
+   macro avg       0.81      0.84      0.82      8378
+weighted avg       0.86      0.85      0.85      8378

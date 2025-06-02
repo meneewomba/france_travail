@@ -1,0 +1,17 @@
+README.md
+setup.py
+./DatabaseCreator/FranceTravailDataExtractor2.py
+./DatabaseCreator/__init__.py
+./DatabaseCreator/database.py
+./DatabaseCreator/token_manager.py
+./test/__init__.py
+./test/database_test.py
+DatabaseCreator/FranceTravailDataExtractor2.py
+DatabaseCreator/__init__.py
+DatabaseCreator/database.py
+jun24_cde_job_market.egg-info/PKG-INFO
+jun24_cde_job_market.egg-info/SOURCES.txt
+jun24_cde_job_market.egg-info/dependency_links.txt
+jun24_cde_job_market.egg-info/top_level.txt
+test/__init__.py
+test/database_test.py

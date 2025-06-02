@@ -1,0 +1,786 @@
+{
+	"info": {
+		"_postman_id": "78e6d9e2-2c44-42bc-a078-28d7b1f6e623",
+		"name": "France Travail",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28605517"
+	},
+	"item": [
+		{
+			"name": "Create token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"\r",
+							"pm.collectionVariables.set(\"token\", jsonData.access_token);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "clientSecret",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "api_explorateurmetiersv1 explojob",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "test",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://test.fr",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "{{id}}",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "{{secret}}",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "o2dsoffre api_offresdemploiv2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://entreprise.francetravail.fr/connexion/oauth2/access_token?realm=%2Fpartenaire",
+					"protocol": "https",
+					"host": [
+						"entreprise",
+						"francetravail",
+						"fr"
+					],
+					"path": [
+						"connexion",
+						"oauth2",
+						"access_token"
+					],
+					"query": [
+						{
+							"key": "realm",
+							"value": "%2Fpartenaire"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recherche Offre par paramètre",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "clientSecret",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "api_explorateurmetiersv1 explojob",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "test",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://test.fr",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}offres/search",
+					"host": [
+						"{{base_url}}offres"
+					],
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "accesTravailleurHandicape",
+							"value": null,
+							"description": "boolean",
+							"disabled": true
+						},
+						{
+							"key": "appellation",
+							"value": null,
+							"description": "str code appelation ROME",
+							"disabled": true
+						},
+						{
+							"key": "codeNAF",
+							"value": null,
+							"description": "str",
+							"disabled": true
+						},
+						{
+							"key": "codeROME",
+							"value": null,
+							"description": "str",
+							"disabled": true
+						},
+						{
+							"key": "commune",
+							"value": null,
+							"description": "str code INSEE",
+							"disabled": true
+						},
+						{
+							"key": "departement",
+							"value": null,
+							"description": "str",
+							"disabled": true
+						},
+						{
+							"key": "distance",
+							"value": null,
+							"description": "int",
+							"disabled": true
+						},
+						{
+							"key": "domaine",
+							"value": null,
+							"description": "str",
+							"disabled": true
+						},
+						{
+							"key": "dureeContratMax",
+							"value": null,
+							"description": "str (0-99)",
+							"disabled": true
+						},
+						{
+							"key": "dureeContratMin",
+							"value": null,
+							"description": "str 0 à 99",
+							"disabled": true
+						},
+						{
+							"key": "dureeHebdo",
+							"value": null,
+							"description": "str",
+							"disabled": true
+						},
+						{
+							"key": "dureeHebdoMax",
+							"value": null,
+							"description": "str",
+							"disabled": true
+						},
+						{
+							"key": "dureeHebdoMin",
+							"value": null,
+							"description": "str",
+							"disabled": true
+						},
+						{
+							"key": "entreprisesAdaptees",
+							"value": null,
+							"description": "boolean",
+							"disabled": true
+						},
+						{
+							"key": "experience",
+							"value": null,
+							"description": "str (1 moins d'un an, 2 de 1 à 3 ans, 3 plus de 3 ans",
+							"disabled": true
+						},
+						{
+							"key": "experienceExigence",
+							"value": null,
+							"description": "(D débutant accepté, S expérience souhaitée, E expérience exigée",
+							"disabled": true
+						},
+						{
+							"key": "inclureLimitrophes",
+							"value": null,
+							"description": "boolean",
+							"disabled": true
+						},
+						{
+							"key": "maxCreationDate",
+							"value": null,
+							"description": "str (format yyyy-MM-dd'T'hh:mm:ss'Z')",
+							"disabled": true
+						},
+						{
+							"key": "minCreationDate",
+							"value": null,
+							"description": "str (format yyyy-MM-dd'T'hh:mm:ss'Z')",
+							"disabled": true
+						},
+						{
+							"key": "modeSelectionPartenaires",
+							"value": null,
+							"description": " str Énumération (INCLUS ou EXCLU)",
+							"disabled": true
+						},
+						{
+							"key": "motsCles",
+							"value": null,
+							"description": "str",
+							"disabled": true
+						},
+						{
+							"key": "natureContrat",
+							"value": null,
+							"description": "str code de la nature du contrat",
+							"disabled": true
+						},
+						{
+							"key": "niveauFormation",
+							"value": null,
+							"description": "str",
+							"disabled": true
+						},
+						{
+							"key": "offresMRS",
+							"value": null,
+							"description": "boolean",
+							"disabled": true
+						},
+						{
+							"key": "offresManqueCandidats",
+							"value": null,
+							"description": "boolean",
+							"disabled": true
+						},
+						{
+							"key": "origineOffre",
+							"value": null,
+							"description": "Valeurs possibles :\n\n1 -> Pôle emploi\n2 -> Partenaire",
+							"disabled": true
+						},
+						{
+							"key": "partenaires",
+							"value": null,
+							"description": "str (voir mode selectionPartenaires)",
+							"disabled": true
+						},
+						{
+							"key": "paysContinent",
+							"value": null,
+							"description": "str",
+							"disabled": true
+						},
+						{
+							"key": "periodeSalaire",
+							"value": null,
+							"description": "str (M Mensuel, A Annuel, H Horaire, C Cachet) salaire minimum obligatoire",
+							"disabled": true
+						},
+						{
+							"key": "permis",
+							"value": null,
+							"description": "str",
+							"disabled": true
+						},
+						{
+							"key": "publieeDepuis",
+							"value": null,
+							"description": "int",
+							"disabled": true
+						},
+						{
+							"key": "qualification",
+							"value": null,
+							"description": "(0 non-cadre, 9 cadre)",
+							"disabled": true
+						},
+						{
+							"key": "range",
+							"value": null,
+							"description": "Format : p-d, \np est l’index du 1er element (min 0 max 3000\nd est l’index de dernier élément max 3149",
+							"disabled": true
+						},
+						{
+							"key": "region",
+							"value": null,
+							"description": "str",
+							"disabled": true
+						},
+						{
+							"key": "salaireMin",
+							"value": null,
+							"description": "str codetype salaire mn obligatoire",
+							"disabled": true
+						},
+						{
+							"key": "secteurActivite",
+							"value": null,
+							"description": "str",
+							"disabled": true
+						},
+						{
+							"key": "sort",
+							"value": null,
+							"description": "Pertinence décroissante , distance croissante, date de création horodatée décroissante, origine de l’offre : sort=0\nDate de création horodatée décroissante, pertinence décroissante, distance croissante, origine de l’offre : sort=1\nDistance croissante, pertinence décroissante, date de création horodatée décroissante, origine de l’offre : sort=2",
+							"disabled": true
+						},
+						{
+							"key": "tempsPlein",
+							"value": null,
+							"description": "boolean",
+							"disabled": true
+						},
+						{
+							"key": "theme",
+							"value": null,
+							"description": "theme ROME",
+							"disabled": true
+						},
+						{
+							"key": "typeContrat",
+							"value": null,
+							"description": "code dy type contrat",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recherche Offre par ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.francetravail.io/partenaire/offresdemploi/v2/offres/",
+					"protocol": "https",
+					"host": [
+						"api",
+						"francetravail",
+						"io"
+					],
+					"path": [
+						"partenaire",
+						"offresdemploi",
+						"v2",
+						"offres",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Referentiel appelations ROME",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}referentiel/appellations",
+					"host": [
+						"{{base_url}}referentiel"
+					],
+					"path": [
+						"appellations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Referentiel communes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}referentiel/communes",
+					"host": [
+						"{{base_url}}referentiel"
+					],
+					"path": [
+						"communes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Referentiel continents",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}referentiel/continents",
+					"host": [
+						"{{base_url}}referentiel"
+					],
+					"path": [
+						"continents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "referentiel departements",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}referentiel/departements",
+					"host": [
+						"{{base_url}}referentiel"
+					],
+					"path": [
+						"departements"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "referentiel domaines metiers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}referentiel/domaines",
+					"host": [
+						"{{base_url}}referentiel"
+					],
+					"path": [
+						"domaines"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "referentiel langues",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}referentiel/langues",
+					"host": [
+						"{{base_url}}referentiel"
+					],
+					"path": [
+						"langues"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "referentiel métiers ROME",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}referentiel/metiers",
+					"host": [
+						"{{base_url}}referentiel"
+					],
+					"path": [
+						"metiers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "referentiel code NAFS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}referentiel/nafs",
+					"host": [
+						"{{base_url}}referentiel"
+					],
+					"path": [
+						"nafs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "referentiel des natures de contrats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}referentiel/naturesContrats",
+					"host": [
+						"{{base_url}}referentiel"
+					],
+					"path": [
+						"naturesContrats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "referentiel niveaux de formations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}referentiel/niveauxFormations",
+					"host": [
+						"{{base_url}}referentiel"
+					],
+					"path": [
+						"niveauxFormations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "referentiel Pays",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}referentiel/pays",
+					"host": [
+						"{{base_url}}referentiel"
+					],
+					"path": [
+						"pays"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "referentiel permis",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}referentiel/permis",
+					"host": [
+						"{{base_url}}referentiel"
+					],
+					"path": [
+						"permis"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "referentiel regions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}referentiel/regions",
+					"host": [
+						"{{base_url}}referentiel"
+					],
+					"path": [
+						"regions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "referentiel secteurs d'activites",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}referentiel/secteursActivites",
+					"host": [
+						"{{base_url}}referentiel"
+					],
+					"path": [
+						"secteursActivites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "referentiel themes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}referentiel/themes",
+					"host": [
+						"{{base_url}}referentiel"
+					],
+					"path": [
+						"themes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "referentiel types contrats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}referentiel/typesContrats",
+					"host": [
+						"{{base_url}}referentiel"
+					],
+					"path": [
+						"typesContrats"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "PAR_test_d92ebec1ff57638652ff573614cdcc6b7fe8113e0876e88b9a3bac8a8fddcc73",
+			"type": "string"
+		},
+		{
+			"key": "secret",
+			"value": "044ae83d4ea5d1aaf8112825635ae4e7c12e2c4ed77ffc8b3ac318524b7f79f1",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "base_url",
+			"value": "https://api.francetravail.io/partenaire/offresdemploi/v2/"
+		}
+	]
+}
