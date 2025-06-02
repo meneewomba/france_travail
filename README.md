@@ -67,9 +67,9 @@ Lancer le déploiement en se positionnant à la racine du dossier avec docker co
 ### accès à l'api 
 
 localhost:8000
-endpoints : 
+#### endpoints : 
 /search/   [POST]
-payload 
+##### payload 
 
 {"must_contain": [],
         "contain_any": [],
@@ -77,7 +77,7 @@ payload
         }
 
 /predict [POST]
-payload
+##### payload
 
 {"job_ids": []}
 
