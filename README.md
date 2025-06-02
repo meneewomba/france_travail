@@ -64,7 +64,7 @@ Lancer le déploiement en se positionnant à la racine du dossier avec docker co
 
 ## Acces
 
-### acces à l'api 
+### accès à l'api 
 
 localhost:8000
 endpoints : 
@@ -81,7 +81,7 @@ payload
 
 {"job_ids": []}
 
-#### acces base de données 
+### accès base de données 
 
 dans cmd
 mysql -u xxxx -pxxxxx mydb
@@ -90,7 +90,7 @@ mysql -u xxxx -pxxxxx mydb
 localhost:8080 
 admin/admin
 
-accès grafana
+### accès grafana
 localhost:3000
 
 
